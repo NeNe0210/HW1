@@ -11,8 +11,12 @@ public class Assignment01Q04 {
         if (n == 0) {
             return array;
         }
-        if (direction == 'R') {
+        if (direction == 'L') {
             move = -move;
+        }
+        move = move % n;
+        if (move < 0) {
+            move += n;
         }
         int[] temp = new int[n];
         for (int i = 0; i < n; i++) {
